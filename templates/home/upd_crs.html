@@ -1,0 +1,202 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Cards {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+
+<style>
+  .step{
+    display: none;
+  }
+
+  .step.active{
+    display: block;
+  }
+
+button.next-btn{
+  float: right;
+}
+
+button.prev-btn{
+    float: left;
+}
+
+button.sub-btn{
+    float: right;
+}
+
+</style>
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+      <div class="card mb-4">
+        <div class="card-header"><strong>Teachers</strong><span class="small ms-1">Form of registered Teachers</span></div>
+        <div class="card-body">
+          <div class="tab-content rounded-bottom">
+            <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-640">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="card bg-light">
+                    <div class="card-body">
+                      <h5 class="card-title text-dark">Adding a new course</h5>
+                      <!-- Step wise form content -->
+                      <form> 
+                        <!-- step1 Content -->
+                        <div class="step step1 active">
+                          <h2 class="font-normal text-dark">Class Course INFORMATIONS</h2>
+                          <!-- * Tables of registration * -->
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Courses</th>
+                                <th scope="col">Choice</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Mathematique</td>
+                                <td>
+                                  <div class="form-check">
+                                      <input class="form-check-input" id="flexCheckDefault" type="checkbox">
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                              <tr>
+                                <td>Informatique</td>
+                                <td>
+                                  <div class="form-check">
+                                      <input class="form-check-input" id="flexCheckDefault" type="checkbox">
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                              <tr>
+                                <td>Anglais</td>
+                                <td>
+                                  <div class="form-check">
+                                      <input class="form-check-input" id="flexCheckDefault" type="checkbox">
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                            </tbody>
+                          </table>
+                          <button type="button" class="btn btn-info text-white next-btn">
+                            Next
+                          </button>
+                        </div>
+                        <!-- step3 Content, default hidden on page load. -->
+                        <div class="step step2">
+                          <h2 class="font-normal text-dark">CHOICE OF CYCLE</h2>
+
+                          <!-- * Tables of registration * -->
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Courses</th>
+                                <th scope="col">Choice</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Mathematique</td>
+                                <td>
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Open this select menu</option>
+                                      <option value="1">Prosipegoko Nsipanko Adrian</option>
+                                      <option value="2">Fanche Meponmoe Clyde</option>
+                                      <option value="3">Temnou Fitz</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
+                              <tr>
+                                <td>Informatique</td>
+                                <td>
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Open this select menu</option>
+                                      <option value="1">Prosipegoko Nsipanko Adrian</option>
+                                      <option value="2">Fanche Meponmoe Clyde</option>
+                                      <option value="3">Temnou Fitz</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
+                              <tr>
+                                <td>Anglais</td>
+                                <td>
+                                    <select class="form-select" aria-label="Default select example">
+                                      <option selected>Open this select menu</option>
+                                      <option value="1">Prosipegoko Nsipanko Adrian</option>
+                                      <option value="2">Fanche Meponmoe Clyde</option>
+                                      <option value="3">Temnou Fitz</option>
+                                    </select>
+                                </td>
+                              </tr>
+                              <tr>
+                            </tbody>
+                          </table>
+
+                          <button type="button" class="btn btn-info text-white prev-btn">
+                            Previous
+                          </button>
+                          <button class="btn btn-success text-white sub-btn" type="submit">
+                            Save
+                          </button>
+                        </div>
+                          
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script>
+  const steps = Array.from(document.querySelectorAll("form .step"))
+  const nextBtn = document.querySelectorAll("form .next-btn")
+  const prevBtn = document.querySelectorAll("form .prev-btn")
+  const form = document.querySelector("form")
+  console.log(steps, nextBtn, prevBtn, form)
+
+  nextBtn.forEach(button=>{
+    button.addEventListener('click', () => {
+      changeStep('next')
+    })
+  })
+
+  prevBtn.forEach(button=>{
+    button.addEventListener('click', () => {
+      changeStep('prev')
+    })
+  })
+
+  function changeStep(btn){
+    let index=0;
+    const active = document.querySelector("form .step.active")
+    index = steps.indexOf(active)
+    steps[index].classList.remove("active")
+    if(btn === "next"){
+      index ++
+    }else if(btn === "prev"){
+      index --
+    }
+    steps[index].classList.add("active")
+  }
+</script>
+{% endblock javascripts %}

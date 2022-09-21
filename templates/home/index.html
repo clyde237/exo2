@@ -1,0 +1,95 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Cards {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+<!-- {% block navigation %}
+  <div class="container-fluid">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb my-0 ms-2">
+        <li class="breadcrumb-item">
+          <span>Home</span>
+        </li>
+        <li class="breadcrumb-item active"><span>Dashboard</span></li>
+      </ol>
+    </nav>
+  </div>
+{% endblock %} -->
+
+{% block content %}
+
+  <div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+      <div class="card mb-4">
+        <div class="card-header"><strong>Accueil</strong><span class="small ms-1">Bienvenu dans - Automatic Lessons Planning</span></div>
+        <div class="card-body">
+
+          <!-- * Top dashboard row * -->
+          <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col-xl-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">list of registered teachers</h5>
+                  <div class="card text-end" style="width: 18rem;"><img class="card-img-top" src="/static/img/ens0.png" alt="">
+                    <div class="card-img-overlay">
+                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                      <a class="btn btn-primary text-white" href="#">Teachers</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">list of registered classes</h5>
+                  <div class="card text-end" style="width: 18rem;"><img class="card-img-top" src="/static/img/clas0.png" alt="">
+                    <div class="card-img-overlay">
+                      <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                      <a class="btn btn-primary text-white" href="#">Classes</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- * next dashboard row * -->
+              <div class="col-xl-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Generate a timetable</h5>
+                    <div class="card text-end" style="width: 18rem;"><img class="card-img-top" src="/static/img/gen0.png" alt="">
+                      <div class="card-img-overlay">
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <a class="btn btn-primary text-white" href="#">Generate</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-4">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">See lessons</h5>
+                    <div class="card text-end" style="width: 18rem;"><img class="card-img-top" src="/static/img/cons0.png" alt="">
+                      <div class="card-img-overlay">
+                        <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                        <a class="btn btn-primary text-white" href="#">Check</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

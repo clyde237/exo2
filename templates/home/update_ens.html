@@ -1,0 +1,227 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Cards {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+
+<style>
+  .step{
+    display: none;
+  }
+
+  .step.active{
+    display: block;
+  }
+
+button.next-btn{
+  float: right;
+}
+
+button.prev-btn{
+    float: left;
+}
+
+button.sub-btn{
+    float: right;
+}
+
+</style>
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+      <div class="card mb-4">
+        <div class="card-header"><strong>Teachers</strong><span class="small ms-1">Form of registered Teachers</span></div>
+        <div class="card-body">
+          <div class="tab-content rounded-bottom">
+            <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-640">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="card bg-light">
+                    <div class="card-body">
+                      <h5 class="card-title text-dark">Adding a new course</h5>
+                      <!-- Step wise form content -->
+                      <form> 
+                        <!-- step1 Content -->
+                        <div class="step step1 active">
+                          <h2 class="font-normal text-dark">PERSONNAL INFORMATIONS</h2>
+                          <label class="form-label" for="Name">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Name</span>
+                            <input class="form-control" id="Name" type="text" name="name" aria-describedby="basic-addon3" required>
+                          </div>
+                          <label class="form-label" for="Surname">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Surname</span>
+                            <input class="form-control" id="Surname" type="text" name="surname" aria-describedby="basic-addon3">
+                          </div>
+                          <label class="form-label" for="Phone">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Phone</span>
+                            <input class="form-control" id="Phone" type="text" name="phone" aria-describedby="basic-addon3" required>
+                          </div>
+                          <label class="form-label" for="password">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Password</span>
+                            <input class="form-control" id="password" name="password" type="password" aria-describedby="basic-addon3" required>
+                          </div>
+                          <label class="form-label" for="Confirm">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Confirm Password</span>
+                            <input class="form-control" id="Confirm" name="confirm" type="password" aria-describedby="basic-addon3" required>
+                          </div>
+                          <button type="button" class="btn btn-info text-white next-btn">
+                            Next
+                          </button>
+                        </div>
+                        <!-- step2 Content, default hidden on page load. -->
+                        <div class="step step2">
+                          <h2 class="font-normal text-dark">SKILLS INFORMATIONS</h2>
+
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="Mathematiques" type="checkbox" value="Mathematiques">
+                            <label class="form-check-label" for="Mathematiques">Mathematiques</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="Anglais" type="checkbox" value="Anglais">
+                            <label class="form-check-label" for="Anglais">Anglais</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="Informatique" type="checkbox" value="Informatique">
+                            <label class="form-check-label" for="Informatique">Informatique</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="SVT" type="checkbox" value="SVT">
+                            <label class="form-check-label" for="SVT">SVT</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" id="EPS" type="checkbox" value="EPS">
+                            <label class="form-check-label" for="EPS">EPS</label>
+                          </div><br><br>
+                          <button class="btn btn-info text-white prev-btn" type="button">
+                            Previous
+                          </button>
+                          <button type="button" class="btn btn-info text-white next-btn">
+                            Next
+                          </button>
+                        </div>
+                        <!-- step3 Content, default hidden on page load. -->
+                        <div class="step step3">
+                          <h2 class="font-normal text-dark">CHOICE OF CYCLE</h2>
+
+                          <!-- * Tables of registration * -->
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">Courses</th>
+                                <th scope="col" colspan="2">Cycle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Mathematique</td>
+                                <td>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="inlineRadio1" type="radio" name="Line1" value="1er cycle">
+                                    <label class="form-check-label" for="inlineRadio1">1<sup>er</sup> Cycle</label>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="inlineRadio2" type="radio" name="Line1" value="2eme cycle">
+                                    <label class="form-check-label" for="inlineRadio2">2<sup>eme</sup> Cycle</label>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                              <tr>
+                                <td>Informatique</td>
+                                <td>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="inlineRadio3" type="radio" name="Line2" value="1er cycle">
+                                    <label class="form-check-label" for="inlineRadio3">1<sup>er</sup> Cycle</label>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="inlineRadio4" type="radio" name="Line2" value="2eme cycle">
+                                    <label class="form-check-label" for="inlineRadio4">2<sup>eme</sup> Cycle</label>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                              <tr>
+                                <td>Anglais</td>
+                                <td>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="inlineRadio5" type="radio" name="Line3" value="1er cycle">
+                                    <label class="form-check-label" for="inlineRadio5">1<sup>er</sup> Cycle</label>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="form-check form-check-inline">
+                                    <input class="form-check-input" id="inlineRadio6" type="radio" name="Line3" value="2eme cycle">
+                                    <label class="form-check-label" for="inlineRadio6">2<sup>eme</sup> Cycle</label>
+                                  </div>
+                                </td>
+                              </tr>
+                              <tr>
+                            </tbody>
+                          </table>
+
+                          <button type="button" class="btn btn-info text-white prev-btn">
+                            Previous
+                          </button>
+                          <button class="btn btn-success text-white sub-btn" type="submit">
+                            Save
+                          </button>
+                        </div>
+                          
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+<script>
+  const steps = Array.from(document.querySelectorAll("form .step"))
+  const nextBtn = document.querySelectorAll("form .next-btn")
+  const prevBtn = document.querySelectorAll("form .prev-btn")
+  const form = document.querySelector("form")
+  console.log(steps, nextBtn, prevBtn, form)
+
+  nextBtn.forEach(button=>{
+    button.addEventListener('click', () => {
+      changeStep('next')
+    })
+  })
+
+  prevBtn.forEach(button=>{
+    button.addEventListener('click', () => {
+      changeStep('prev')
+    })
+  })
+
+  function changeStep(btn){
+    let index=0;
+    const active = document.querySelector("form .step.active")
+    index = steps.indexOf(active)
+    steps[index].classList.remove("active")
+    if(btn === "next"){
+      index ++
+    }else if(btn === "prev"){
+      index --
+    }
+    steps[index].classList.add("active")
+  }
+</script>
+{% endblock javascripts %}

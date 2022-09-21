@@ -1,0 +1,104 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Cards {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}
+
+<style>
+
+a.canc-btn{
+    float: left;
+}
+
+a.save-btn{
+    float: right;
+}
+
+</style>
+
+{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+      <div class="card mb-4">
+        <div class="card-header"><strong>Teachers</strong><span class="small ms-1">Form of registered Teachers</span></div>
+        <div class="card-body">
+          <div class="tab-content rounded-bottom">
+            <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-640">
+              <div class="row">
+                <div class="col-sm-8">
+                  <div class="card bg-light">
+                    <div class="card-body">
+                      <h5 class="card-title text-dark">Adding a new course</h5>
+                      <!-- Step wise form content -->
+                      <form> 
+                        <!-- step1 Content -->
+                        <div class="step step1 active">
+                          <h2 class="font-normal text-dark">Class INFORMATIONS</h2>
+                          <label class="form-label" for="Name">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Class Name</span>
+                            <input class="form-control" id="Name" type="text" name="name" aria-describedby="basic-addon3" required>
+                          </div>
+                          <label class="form-label" for="Name">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Staff</span>
+                            <input class="form-control" id="Name" type="number" name="name" aria-describedby="basic-addon3" required>
+                          </div>
+                          <label class="form-label" for="Surname">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Division</span>
+                            <select class="form-select" aria-label="Default select example">
+                              <option selected>Open this select menu</option>
+                              <option value="1">I</option>
+                              <option value="2">II</option>
+                              <option value="3">III</option>
+                            </select>
+                          </div>
+                          <label class="form-label" for="Surname">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Courses</span>
+                            <select class="form-select" aria-label="Default select example" required>
+                              <option selected>Open this select menu</option>
+                              <option value="1">Mathematiques</option>
+                              <option value="2">Anglais</option>
+                              <option value="3">Informatique</option>
+                            </select>
+                          </div>
+                          <label class="form-label" for="Name">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Course length</span>
+                            <input class="form-control" id="Name" type="number" name="name" aria-describedby="basic-addon3" required> H
+                          </div>
+                          <label class="form-label" for="Surname">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Teachers</span>
+                            <select class="form-select" aria-label="Default select example" required>
+                              <option selected>Open this select menu</option>
+                              <option value="1">Prosipegoko Adrian</option>
+                              <option value="2">Fanche Clyde</option>
+                              <option value="3">Temnou Fitz</option>
+                            </select>
+                          </div>
+                          <a href="f_cycle.html" class="btn btn-info text-white canc-btn" type="button">
+                              Cancel
+                          </a>
+                          <a href="add_hall.html" class="btn btn-success text-white save-btn" type="button">
+                              Save
+                          </a>
+                        </div>
+                          
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+{% endblock javascripts %}

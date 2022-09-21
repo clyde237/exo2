@@ -1,0 +1,103 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Cards {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+      <div class="card mb-4">
+        <div class="card-header"><strong>Course</strong><span class="small ms-1">Add a new course</span></div>
+        <div class="card-body">
+          <div class="example">
+            <div class="tab-content rounded-bottom">
+              <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-640">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="card bg-light">
+                      <div class="card-body">
+                        <h5 class="card-title">Adding a new course</h5>
+                        <form method="POST" action="#">
+                          <label class="form-label" for="basic-url">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Name of course</span>
+                            <input class="form-control" id="basic-url" type="text" aria-describedby="basic-addon3" required>
+                          </div>
+                         <!-- <label class="form-label" for="basic-url">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Durée de séance(h)</span>
+                            <input class="form-control" id="basic-url" type="number" min="0" aria-describedby="basic-addon3" required>
+                          </div>
+                          <div class="input-group mb-3">
+                            <select class="form-select" aria-label="Default select example" required>
+                              <option selected>Selectionner un departement</option>
+                              <option value="Departement 1">Departement 1</option>
+                              <option value="Departement 2">Departement 2</option>
+                              <option value="Departement 3">Departement 3</option>
+                            </select>
+                          </div>
+                          <div class="input-group mb-3">
+                            <select class="form-select" aria-label="Default select example" required>
+                              <option selected>Affilier un enseignant</option>
+                              <option value="Departement 1">Enseignant 1</option>
+                              <option value="Departement 2">Enseignant 2</option>
+                              <option value="Departement 3">Enseignant 3</option>
+                            </select>
+                          </div>-->
+                          <div class="text-end">
+                            <input type="submit" class="btn btn-success text-white" value="Valider">
+                            <a class="btn btn-primary text-white btn-primary" href="disciplines.html">Cancel</a>
+                          </div>   
+                        </form>                     
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="col-sm-6">
+                    <div class="card bg-light">
+                      <div class="card-body">
+                        <h5 class="card-title">GINFO: Genie Informatique</h5>
+                        <p class="card-text">Liste des salles et filières du GINFO avec bouton modifier</p>                        
+                        <div class="text-end">
+                          <a class="btn btn-primary text-white" href="#">Ajouter une Salle</a>
+                          <a class="btn btn-primary text-white" href="#">Ajouter une Filiere</a>
+                          <a class="btn btn-primary text-white" href="#">Modifier</a>
+                        </div>                        
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="tab-pane pt-1" role="tabpanel" id="code-640">
+                <script class="language-markup" type="text/plain">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p><a class="btn btn-primary" href="#">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p><a class="btn btn-primary" href="#">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

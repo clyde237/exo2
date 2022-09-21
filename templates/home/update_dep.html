@@ -1,0 +1,88 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Cards {% endblock %} 
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="body flex-grow-1 px-3">
+    <div class="container-lg">
+      <div class="card mb-4">
+        <div class="card-header"><strong>Departements</strong><span class="small ms-1">GINFO - Genie Informatique</span></div>
+        <div class="card-body">
+          <div class="example">
+            <div class="tab-content rounded-bottom">
+              <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-640">
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="card bg-light">
+                      <div class="card-body">
+                        <h5 class="card-title">Modification du departement</h5>
+                        <form method="POST" action="#">
+                          <div class="input-group mb-3">
+                            <h5 class="card-title">Forma(Ex): <u>GINFO: Genie Informatique</u></h5>
+                            <h5 class="card-title">Nom actuel du département: <u> Departement 01</u></h5>
+                          </div>
+                          <label class="form-label" for="basic-url">Your vanity URL</label>
+                          <div class="input-group mb-3"><span class="input-group-text" id="basic-addon3">Nouveau nom: </span>
+                            <input class="form-control" id="basic-url" type="texte" aria-describedby="basic-addon3" required>
+                          </div>
+                          <div class="text-end">
+                            <input type="submit" class="btn btn-success text-white" value="Modifier">
+                            <a class="btn btn-primary text-white" href="departements.html">Cancel</a>
+                            <input type="button" class="btn btn-danger text-white" value="Supprimer le département">
+                          </div>   
+                        </form>                     
+                      </div>
+                    </div>
+                  </div>
+                  <!-- <div class="col-sm-6">
+                    <div class="card bg-light">
+                      <div class="card-body">
+                        <h5 class="card-title">GINFO: Genie Informatique</h5>
+                        <p class="card-text">Liste des salles et filières du GINFO avec bouton modifier</p>                        
+                        <div class="text-end">
+                          <a class="btn btn-primary text-white" href="#">Ajouter une Salle</a>
+                          <a class="btn btn-primary text-white" href="#">Ajouter une Filiere</a>
+                          <a class="btn btn-primary text-white" href="#">Modifier</a>
+                        </div>                        
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </div>
+              <div class="tab-pane pt-1" role="tabpanel" id="code-640">
+                <script class="language-markup" type="text/plain">
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p><a class="btn btn-primary" href="#">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Special title treatment</h5>
+                          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p><a class="btn btn-primary" href="#">Go somewhere</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
